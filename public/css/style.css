@@ -6,6 +6,14 @@ main {
     justify-content: center;
 }
 
+.card-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 .post {
-    width: 80%;
+    width: 85%;
 }

@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
             ],
         });
         console.log("Before serialized" + postData); //see data before serialized
-        res.json(postData)
+        // res.json(postData)
 
         //The post data is serialized so the handlebars template can read it
         const posts = postData.map((post) => post.get({ plain:true }));
@@ -47,7 +47,7 @@ router.get('/post/:id', async (req, res) => {
             ]
         });
         console.log("Before serialized" + postData); //see data before serialized
-        res.json(postData)
+        // res.json(postData)
 
         //The post data is serialized so the handlebars template can read it
         const post = postData.get({ plain:true });
@@ -55,7 +55,7 @@ router.get('/post/:id', async (req, res) => {
         console.log("After serialized" + post); //see data after serialized
 
         //pass in the serialized data dn session into template
-        res.render('homepage', {
+        res.render('postview', {
             post,
             logged_in: req.session.logged_in
         });
