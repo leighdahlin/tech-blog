@@ -1,10 +1,13 @@
-<div class="card border-secondary mb-3 post">
-    <div class="card-header">
-        <h3>{{title}}</h2>
-        <p class="username">{{user.name}}</p>
+
+    <div class="card border-secondary mb-3 post">
+        <a href="/post/{{user.id}}">
+            <div class="card-header">
+                <h3>{{title}}</h2>
+                <p class="username">{{user.name}}</p>
+            </div>
+            <div class="card-body text-secondary">
+                <p class="date">{{created_at}}</p>
+                <p class="card-text">{{content}}</p>
+            </div> 
+        </a>
     </div>
-    <div class="card-body text-secondary">
-        <p class="date">{{created_at}}</p>
-        <p class="card-text">{{content}}</p>
-    </div>
-</div>

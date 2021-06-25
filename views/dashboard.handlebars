@@ -1,8 +1,10 @@
-<h1>Welcome back {{user.name}}!</h1>
-<button type="button" id="create" class="btn btn-primary btn-lg">+ Create new post</button>
-<div class="containter">
-<h3>Your Posts</h3>
-{{#each user.posts as |post|}}
-{{> user-posts}}
-{{/each}}
+<h1>{{user.name}}'s Blogatorium</h1>
+<div class="dashboard">
+    <button type="button" id="create" class="btn btn-primary btn-lg">+ Create new post</button>
+    <div class="containter">
+        <h3>Your Posts</h3>
+        {{#each user.posts as |post|}}
+        {{> user-posts}}
+        {{/each}}
+    </div>
 </div>
