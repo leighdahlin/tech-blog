@@ -2,3 +2,9 @@
 <h4>{{post.user.name}}</h4>
 <p>{{post.created_at}}</p>
 <p>{{post.content}}</p>
+
+<div class="container">
+    {{#each post.comments as |comment|}}
+    {{> comments}}
+    {{/each}}
+</div>

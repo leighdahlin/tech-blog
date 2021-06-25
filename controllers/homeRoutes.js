@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
                 {
                 model: User,
                 attributes: ['name'],
-                },
+                }
             ],
         });
         console.log("Before serialized" + postData); //see data before serialized
@@ -41,18 +41,16 @@ router.get('/post/:id', async (req, res) => {
                     attributes: ['name'],
                 },
                 {
+                    //figure out how to pull the username associated with the user id
                     model: Comment,
                     attributes: ['content','user_id','created_at']
                 }
             ]
         });
-        console.log("Before serialized" + postData); //see data before serialized
         // res.json(postData)
 
         //The post data is serialized so the handlebars template can read it
         const post = postData.get({ plain:true });
-
-        console.log("After serialized" + post); //see data after serialized
 
         //pass in the serialized data dn session into template
         res.render('postview', {
@@ -65,8 +63,30 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-router.get('/dashboard', (req, res) => {
-    res.render('dashboard')
+//add withAuth to get request once login has been done
+router.get('/dashboard/:id', async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.params.id, {
+            include: [
+                {
+                    model : Post,
+                    attributes : ['title', 'content','created_at']
+                }
+            ]
+        });
+        // res.json(userData)
+        const user = userData.get({ plain:true });
+
+        res.render('dashboard', {
+            user,
+            logged_in: req.session.logged_in
+        });
+
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
+    // res.render('dashboard')
 })
 
 

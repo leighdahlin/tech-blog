@@ -2,7 +2,7 @@
 main {
     padding: 5%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
@@ -16,4 +16,8 @@ main {
 
 .post {
     width: 85%;
+}
+
+#create {
+    align-self: flex-start;
 }
