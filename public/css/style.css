@@ -1,0 +1,11 @@
+
+main {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post {
+    width: 80%;
+}

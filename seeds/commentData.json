@@ -1,0 +1,12 @@
+[
+    {
+        "content": "This post is loveley",
+        "post_id": 1,
+        "user_id": 2
+    },
+    {
+        "content": "This is a comment",
+        "post_id": 2,
+        "user_id": 1
+    }
+]
