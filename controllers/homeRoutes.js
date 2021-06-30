@@ -24,14 +24,15 @@ router.get('/', async (req, res) => {
         //pass in the serialized data dn session into template
         res.render('homepage', {
             posts,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id,
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
     try {
         //get the post who's id is in the parameters
         const postData = await Post.findByPk(req.params.id, {
@@ -55,7 +56,8 @@ router.get('/post/:id', async (req, res) => {
         //pass in the serialized data dn session into template
         res.render('postview', {
             post,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id,
         });
 
     } catch (err) {
@@ -64,7 +66,7 @@ router.get('/post/:id', async (req, res) => {
 });
 
 //add withAuth to get request once login has been done
-router.get('/dashboard/:id', async (req, res) => {
+router.get('/dashboard/:id', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
             include: [
@@ -79,7 +81,8 @@ router.get('/dashboard/:id', async (req, res) => {
 
         res.render('dashboard', {
             user,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id,
         });
 
 
@@ -90,14 +93,13 @@ router.get('/dashboard/:id', async (req, res) => {
 })
 
 
-//Use below if want to require the user to login to see content
-// router.get('/login', (req, res) => {
-//     if(req.session.logged_in) {
-//         res.redirect('/dashboard');
-//         return;
-//     }
-
-//     res.redirect('login');
-// })
+router.get('/login', (req, res) => {
+    //if the user is logged in, redirect them to their dashboard
+    if(req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+})
 
 module.exports = router;
