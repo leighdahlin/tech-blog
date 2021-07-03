@@ -1,6 +1,6 @@
 <h1>{{user.name}}'s Blogatorium</h1>
 <div class="dashboard">
-    <button type="button" id="create" class="btn btn-primary btn-lg">+ Create new post</button>
+    <a href="/api/posts"><button type="button" id="create" class="btn btn-primary btn-lg">+ Create new post</button></a>
     <div class="containter">
         <h3>Your Posts</h3>
         {{#each user.posts as |post|}}

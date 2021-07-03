@@ -1,6 +1,8 @@
 <div class="card border-secondary mb-3 post">
     <div class="card-header">
         <h3>{{title}}</h2>
+            <a href="/api/posts/{{id}}"><button type="button" id="edit" class="btn btn-primary btn-lg">Edit</button></a>
+            <button type="button" id="delete" class="btn btn-primary btn-lg">Delete</button>
     </div>
     <div class="card-body text-secondary">
         <p class="date">{{created_at}}</p>

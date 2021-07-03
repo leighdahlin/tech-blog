@@ -72,7 +72,7 @@ router.get('/dashboard/:id', withAuth, async (req, res) => {
             include: [
                 {
                     model : Post,
-                    attributes : ['title', 'content','created_at']
+                    attributes : ['id','title', 'content','created_at']
                 }
             ]
         });

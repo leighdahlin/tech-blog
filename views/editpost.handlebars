@@ -1,0 +1,15 @@
+
+<form class="create-post">
+  <div class="form-group">
+    <label for="title">Edit Your Post Below</label>
+    <textarea class="form-control" id="postContent" rows="1">{{post.title}}</textarea>
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" id="postContent" rows="3">{{post.content}}</textarea>
+  </div>
+  <div class="form-group">
+  <button id="saveChanges" type="submit" class="btn btn-primary mb-2">Save Changes</button>
+  </div>
+</form>
+
+<script src="/js/editpost.js"></script>
