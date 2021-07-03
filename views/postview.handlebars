@@ -5,12 +5,14 @@
     <p>{{post.content}}</p>
 
     <div class="create-btn-div">
-    <button type="button" id="create" class="btn btn-primary btn-lg">Add Comment</button>
+    <button type="button" id="newComment" class="btn btn-primary btn-lg">Add Comment</button>
     </div>
-    
+    <form class="comment"></form>
     <div class="container">
         {{#each post.comments as |comment|}}
         {{> comments}}
         {{/each}}
     </div>
 </div>
+
+<script src="/js/comment.js"></script>

@@ -4,13 +4,12 @@ const { Post, Comment, User } = require('../../models');
 
 router.post('/', async (req,res) => {
     try {
-        const newPost = await Comment.create({
-        content: req.body.content,
-        user_id: req.body.id,
-        // user_id: req.session.user_id,
+        const newComment = await Comment.create({
+        ...req.body,
+        user_id: req.session.user_id,
         });
-        console.log(newPost)        
-        res.status(200).json(newPost)
+        console.log(newComment)        
+        res.status(200).json(newComment)
     } catch (err) {
         res.status(500).json(err)
     }

@@ -1,6 +1,6 @@
 const submitPost = async (event) => {
     event.preventDefault();
-    console.log("YOU ARE IN THIS")
+
     const content = document.querySelector('#postContent').value.trim();
     const title = document.querySelector('#title').value.trim();
 
@@ -18,6 +18,7 @@ const submitPost = async (event) => {
 
         if (response.ok) {
             document.location.replace('/');
+
         } else {
             alert('Failed to create post!')
         }
@@ -25,5 +26,4 @@ const submitPost = async (event) => {
     
 }
 
-document.querySelector('.create-post').addEventListener('submit',submitPost);
 

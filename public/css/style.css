@@ -48,6 +48,14 @@ a {
     margin: 3%;
 }
 
+.comment {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
 /* .indivPost .container {
     display: flex;
     flex-direction: column;
@@ -70,3 +78,4 @@ a {
 .login-form {
     width: 15rem;
 }
+
