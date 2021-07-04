@@ -26,6 +26,7 @@ const sess = {
   cookie: {}, //defult is 2 days of cookie storage
   resave: false,
   saveUninitialized: true,
+  cookie:{maxAge:600000}, //logs the user out after they're idle for 10 minutes
   store: new SequelizeStore({
     db: sequelize
   })
@@ -44,8 +45,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 
 app.use(routes);
 
-//logs the user out after they're idle for 10 minutes
-app.use(session({secret:"Key",cookie:{maxAge:600000}}))
+
 
 // Connect to the database before starting the Express.js server
 // If force true to drop/recreate table(s) on every sync, so set to false

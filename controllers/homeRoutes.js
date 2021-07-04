@@ -44,7 +44,8 @@ router.get('/post/:id', withAuth, async (req, res) => {
                 {
                     //figure out how to pull the username associated with the user id
                     model: Comment,
-                    attributes: ['content','user_id','created_at']
+                    attributes: ['content','user_id','created_at'],
+                    include: [User],
                 }
             ]
         });
@@ -52,7 +53,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
         //The post data is serialized so the handlebars template can read it
         const post = postData.get({ plain:true });
-
+        
         //pass in the serialized data dn session into template
         res.render('postview', {
             post,
