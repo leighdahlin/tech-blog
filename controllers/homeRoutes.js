@@ -21,6 +21,7 @@ router.get('/', async (req, res) => {
 
         console.log("After serialized" + posts); //see data after serialized
 
+        // res.json(posts)
         //pass in the serialized data dn session into template
         res.render('homepage', {
             posts,
