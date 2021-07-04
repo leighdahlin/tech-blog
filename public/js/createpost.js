@@ -3,11 +3,11 @@ const submitPost = async (event) => {
 
     const content = document.querySelector('#postContent').value.trim();
     const title = document.querySelector('#title').value.trim();
+    const user_id = window.location.pathname.split('/')[4];
+    const url = `/api/posts/new/${user_id}`;
 
-    console.log(content)
-    console.log(title)
     if (content && title) {
-        const response = await fetch(`/api/posts`, {
+        const response = await fetch(url, {
             method: 'POST',
             body: JSON.stringify({content, title}),
             headers: {
@@ -17,13 +17,15 @@ const submitPost = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace(`/dashboard/${user_id}`);
 
         } else {
             alert('Failed to create post!')
         }
     }
     
-}
+};
+
+document.querySelector('.create-post').addEventListener('submit',submitPost);
 
 

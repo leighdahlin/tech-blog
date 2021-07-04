@@ -15,38 +15,38 @@ router.post('/', async (req,res) => {
     }
 });
 
-router.put('/:id', async (req,res) => {
-    try {
-        const newPost = await Comment.update({
-        content: req.body.content,
-        user_id: req.body.id,
-        // user_id: req.session.user_id,
-        },
-        {
-            where: {
-                id: req.params.id,
-            }
-        });
-        console.log(newPost)        
-        res.status(200).json(newPost)
-    } catch (err) {
-        res.status(500).json(err)
-    }
-});
+// router.put('/:id', async (req,res) => {
+//     try {
+//         const newPost = await Comment.update({
+//         content: req.body.content,
+//         user_id: req.body.id,
+//         // user_id: req.session.user_id,
+//         },
+//         {
+//             where: {
+//                 id: req.params.id,
+//             }
+//         });
+//         console.log(newPost)        
+//         res.status(200).json(newPost)
+//     } catch (err) {
+//         res.status(500).json(err)
+//     }
+// });
 
-router.delete('/:id', async (req,res) => {
-    try {
-        const newPost = await Comment.destroy(
-        {
-            where: {
-                id: req.params.id,
-            }
-        });
-        console.log(newPost)        
-        res.status(200).json(newPost)
-    } catch (err) {
-        res.status(500).json(err)
-    }
-});
+// router.delete('/:id', async (req,res) => {
+//     try {
+//         const newPost = await Comment.destroy(
+//         {
+//             where: {
+//                 id: req.params.id,
+//             }
+//         });
+//         console.log(newPost)        
+//         res.status(200).json(newPost)
+//     } catch (err) {
+//         res.status(500).json(err)
+//     }
+// });
 
 module.exports = router;
