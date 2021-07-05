@@ -1,8 +1,10 @@
 <div class="card border-secondary mb-3 post">
-    <div class="card-header">
+    <div class="card-header user-posts-header">
         <h3>{{title}}</h2>
-            <a href="/api/posts/{{id}}"><button type="button" id="edit" class="btn btn-primary btn-lg">Edit</button></a>
-            <button type="button" id="delete" class="btn btn-primary btn-lg" data-id={{id}}>Delete</button>
+        <div>
+            <a href="/api/posts/{{id}}"><button type="button" id="edit" class="btn btn-primary">Edit</button></a>
+            <button type="button" id="delete" class="btn btn-primary" data-id={{id}}>Delete</button>
+        </div>
     </div>
     <div class="card-body text-secondary">
         <p class="date">{{format_time created_at}}</p>

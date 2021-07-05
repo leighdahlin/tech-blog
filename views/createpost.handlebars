@@ -1,14 +1,16 @@
-<form class="create-post">
-  <div class="form-group">
-    <label for="title">Enter Your Post Below</label>
-    <input id="title" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <textarea class="form-control" id="postContent" rows="3" placeholder="Enter Your Post Here"></textarea>
-  </div>
-  <div class="form-group">
-  <button id="submitPost" type="submit" class="btn btn-primary mb-2">Submit Post</button>
-  </div>
-</form>
+<div class="create-post-container">
+  <h3 class="new-post">New Post</h3>
+  <form class="create-post">
+    <div class="form-group">
+      <input id="title" class="form-control" type="text" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" id="postContent" rows="10" placeholder="Enter Your Post Here"></textarea>
+    </div>
+    <div class="form-group">
+    <button id="submitPost" type="submit" class="btn btn-primary mb-2">Submit Post</button>
+    </div>
+  </form>
+</div>
 
 <script src="/js/createpost.js"></script>

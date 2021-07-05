@@ -1,8 +1,8 @@
-<h1>{{user.name}}'s Blogatorium</h1>
+<h1 class="dashboard-header">{{user.name}}'s Blogatorium</h1>
 <div class="dashboard">
-    <a href="/api/posts/new/{{user.id}}"><button type="button" id="create" class="btn btn-primary btn-lg">+ Create new post</button></a>
+    <a href="/api/posts/new/{{user.id}}"><button type="button" id="create" class="btn btn-primary">+ Create new post</button></a>
     <div class="containter user-posts">
-        <h3>Your Posts</h3>
+        <h3 class="your-posts-header">Your Posts</h3>
         {{#each user.posts as |post|}}
         {{> user-posts}}
         {{/each}}

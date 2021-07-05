@@ -1,11 +1,11 @@
 <div class="indivPost">
     <h2>{{post.title}}</h2>
-    <h4>{{post.user.name}}</h4>
+    <h4>Author: {{post.user.name}}</h4>
     {{!-- <p>{{post.created_at}}</p> --}}
     <p>{{post.content}}</p>
 
     <div class="create-btn-div">
-    <button type="button" id="newComment" class="btn btn-primary btn-lg">Add Comment</button>
+    <button type="button" id="newComment" class="btn btn-primary">Add Comment</button>
     </div>
     <form class="comment"></form>
     <div class="container">
