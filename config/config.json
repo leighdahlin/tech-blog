@@ -1,11 +1,15 @@
 {
   "development": {
-    "database": "projectdb",
+    "database": "DB_NAME",
+    "username": "DB_USER",
+    "password": "DB_PW",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "projectdb",
+    "database": "DB_NAME",
+    "username": "DB_USER",
+    "password": "DB_PASSWORD",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
