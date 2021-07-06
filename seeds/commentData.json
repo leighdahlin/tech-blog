@@ -1,12 +1,64 @@
 [
     {
-        "content": "This post is loveley",
+        "content": "I'm not a fan of this post.",
         "post_id": 1,
         "user_id": 2
     },
     {
-        "content": "This is a comment",
+        "content": "Apple all the way!",
+        "post_id": 1,
+        "user_id": 3
+    },
+    {
+        "content": "Who owns an Android these days?",
+        "post_id": 1,
+        "user_id": 4
+    },
+    {
+        "content": "Python is way better than Javascript...",
         "post_id": 2,
         "user_id": 1
+    },
+    {
+        "content": "Yes, js is the coding language of today",
+        "post_id": 2,
+        "user_id": 3
+    },
+    {
+        "content": "I'm not sure what this post is about",
+        "post_id": 2,
+        "user_id": 4
+    },
+    {
+        "content": "I love Amzaon, they can control the world!",
+        "post_id": 3,
+        "user_id": 1
+    },
+    {
+        "content": "Wow, Amazon is a powerhouse.",
+        "post_id": 3,
+        "user_id": 2
+    },
+
+    {
+        "content": "I like my free shippping, lay off Amazon",
+        "post_id": 3,
+        "user_id": 4
+    },
+    {
+        "content": "Who cares about data mining?",
+        "post_id": 4,
+        "user_id": 1
+    },
+    {
+        "content": "Thanks for sharing all the info!",
+        "post_id": 4,
+        "user_id": 2
+    },
+    {
+        "content": "Cool",
+        "post_id": 4,
+        "user_id": 3
     }
+
 ]

@@ -1,12 +1,23 @@
 [
     {
-        "title": "Stupid Post",
-        "content": "This is a stupid post",
+        "title": "Apple or Android?",
+        "content": "What do you choose? Apple or Android. This is the question of our generation and there is a divide.",
         "user_id": 1
     },
     {
-        "title": "Lovely Post",
-        "content": "This is a lovely post",
+        "title": "Jumping Javascript",
+        "content": "Javascript is the most adaptable and versitile coding language today. You can use it in both the front-end and back-end and the amount of libraries created for js is vast.",
         "user_id": 2
+    },
+    {
+        "title": "Amazon: Do they control too much?",
+        "content": "There's no doubt that amazon is your one stop shop for all things, I mean, who can beat free shipping for all members? But are they going too far? Providing products at cheap costs is not the only thing Amazon does. Have you heard of Amazon web services? ",
+        "user_id": 3
+    },
+    {
+        "title": "Data Mining: All you need to know",
+        "content": "What exactly is data mining and how can you use it to benefit you? That's what this post is all about.",
+        "user_id": 4
     }
+
 ]

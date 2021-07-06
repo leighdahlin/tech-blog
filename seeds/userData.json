@@ -1,12 +1,24 @@
 [
     {
-        "name": "leighdahlin",
-        "email": "leigh@dahlin.com",
+        "name": "jugglingjeff",
+        "email": "jeff@dgmail.com",
         "password": "password"
     },
     {
         "name": "lovelylisa",
-        "email": "lovely@lisa.com",
+        "email": "lovely@gmail.com",
         "password": "password123"
+    },
+    {
+        "name": "smilingsara",
+        "email": "sara@gmail.com",
+        "password": "secret759"
+    },
+    {
+        "name": "prettypete",
+        "email": "pete@gmail.com",
+        "password": "random564"
     }
+
+
 ]
